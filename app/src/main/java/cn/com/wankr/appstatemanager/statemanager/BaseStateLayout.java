@@ -50,21 +50,21 @@ public abstract class BaseStateLayout extends FrameLayout {
      * 显示loading,此loading为非浮层loading
      */
     public void showLoading() {
-        throw new UnsupportedOperationException("您还没有重写Loading状态的方法");
+        throw new UnsupportedOperationException("you haven't override the showLoading() method");
     }
 
     /**
      * 显示没有关注状态
      */
     public void showNoWatch() {
-        throw new UnsupportedOperationException("您还没有重写没有关注状态的方法");
+        throw new UnsupportedOperationException("you haven't override the showNoWatch() method");
     }
 
     /**
      * 没有搜索结果状态
      */
     public void showNoSearchResult() {
-        throw new UnsupportedOperationException("您还没有重写没有搜索结果状态的方法");
+        throw new UnsupportedOperationException("you haven't override the showNoSearchResult() method");
     }
 
     public interface NoNetworkClickListener {
