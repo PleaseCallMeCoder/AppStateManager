@@ -1,6 +1,7 @@
 package cn.com.wankr.appstatemanager;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
@@ -25,7 +26,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onNoNetworkClickListener(View view) {
                 Toast.makeText(MainActivity.this, "刷新数据，显示之前view", Toast.LENGTH_SHORT).show();
-                mManager.showContent();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        mManager.showContent();
+                    }
+                }, 2000);
             }
         });
 
